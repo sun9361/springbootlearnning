@@ -1,6 +1,5 @@
 Manifest-Version: 1.0
-Implementation-Title: springboot-restful :: Spsringboot ￥ﾮﾞ￧ﾎﾰ Restful
-  ￦ﾜﾍ￥ﾊﾡ￯ﾼﾌ￥ﾟﾺ￤ﾺﾎ HTTP / JSON ￤ﾼﾠ￨ﾾﾓ Demo
+Implementation-Title: springbootbootlearnning
 Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: Administrator
 Implementation-Vendor-Id: springboot
