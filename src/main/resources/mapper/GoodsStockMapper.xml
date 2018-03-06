@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.spring.springboot.dao.StockDao">
+	<resultMap id="BaseResultMap" type="org.spring.springboot.domain.GoodsStock">
+		<result column="id" property="id" />
+		<result column="goodsId" property="goodsId" />
+		<result column="amount" property="amount" />
+	 
+	</resultMap>
+
+	<parameterMap id="goodsStock" type="org.spring.springboot.domain.GoodsStock"/>
+
+	<sql id="Base_Column_List">
+		id, goodsId, amount
+	</sql>
+
+	<select id="findByGoodsId" resultMap="BaseResultMap" parameterType="java.lang.Long">
+		select
+		<include refid="Base_Column_List" />
+		from goods_stock
+		where goodsId = #{goodsId}
+	</select>
+
+	<select id="findAllGoodsStock" resultMap="BaseResultMap" >
+		select
+		<include refid="Base_Column_List" />
+		from goods_stock
+	</select>
+
+	<insert id="saveGoodsStock" parameterMap="goodsStock" useGeneratedKeys="true" keyProperty="id">
+		insert into
+			goods_stock(id,goodsId,amount)
+		values
+			(#{id},#{goodsId},#{amount})
+	</insert>
+
+	<update id="updateStock" parameterMap="goodsStock">
+		update
+			goods_stock
+		set
+		<if test="goodsId!=null">
+			goodsId = #{goodsId},
+		</if>
+		<if test="amount!=null">
+			amount = #{amount},
+		</if>
+	 
+		where
+			id = #{id}
+	</update>
+	<update id="decreaseStock" parameterMap="goodsStock">
+		update
+			goods_stock
+		set
+		 
+		
+			amount = amount-1
+		
+	 
+		where
+			 goodsId=#{goodsId} and amount>0
+	</update>
+	<delete id="deleteStcok" parameterType="java.lang.Long">
+		delete from
+			goods_stock
+		where
+			id = #{id}
+	</delete>
+</mapper>

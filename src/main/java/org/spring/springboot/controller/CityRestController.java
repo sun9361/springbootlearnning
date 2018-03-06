@@ -30,7 +30,7 @@ public class CityRestController {
     }
 
     @RequestMapping(value = "/api/city", method = RequestMethod.POST)
-    public void createCity(@RequestBody City city) {
+    public void createCity( City city) {
         cityService.saveCity(city);
     }
 
