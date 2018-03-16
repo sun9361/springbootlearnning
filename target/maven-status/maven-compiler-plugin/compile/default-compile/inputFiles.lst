@@ -1,7 +1,13 @@
 C:\Users\Administrator\git\springbootlearnning\src\main\java\org\spring\springboot\service\CityService.java
-C:\Users\Administrator\git\springbootlearnning\src\main\java\org\spring\springboot\domain\City.java
-C:\Users\Administrator\git\springbootlearnning\src\main\java\org\spring\springboot\service\impl\CityServiceImpl.java
+C:\Users\Administrator\git\springbootlearnning\src\main\java\org\spring\springboot\controller\StockRestController.java
 C:\Users\Administrator\git\springbootlearnning\src\main\java\org\spring\springboot\Application.java
-C:\Users\Administrator\git\springbootlearnning\src\main\java\org\spring\springboot\controller\AccessCityRestController.java
 C:\Users\Administrator\git\springbootlearnning\src\main\java\org\spring\springboot\controller\CityRestController.java
+C:\Users\Administrator\git\springbootlearnning\src\main\java\org\spring\springboot\service\impl\GoodsStockServiceImpl.java
+C:\Users\Administrator\git\springbootlearnning\src\main\java\org\spring\springboot\dao\StockDao.java
+C:\Users\Administrator\git\springbootlearnning\src\main\java\org\spring\springboot\config\RedisConfig.java
+C:\Users\Administrator\git\springbootlearnning\src\main\java\org\spring\springboot\domain\City.java
+C:\Users\Administrator\git\springbootlearnning\src\main\java\org\spring\springboot\service\GoodsStockService.java
+C:\Users\Administrator\git\springbootlearnning\src\main\java\org\spring\springboot\service\impl\CityServiceImpl.java
+C:\Users\Administrator\git\springbootlearnning\src\main\java\org\spring\springboot\controller\AccessCityRestController.java
 C:\Users\Administrator\git\springbootlearnning\src\main\java\org\spring\springboot\dao\CityDao.java
+C:\Users\Administrator\git\springbootlearnning\src\main\java\org\spring\springboot\domain\GoodsStock.java

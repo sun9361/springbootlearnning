@@ -60,8 +60,8 @@ public class GoodsStockServiceImpl implements GoodsStockService {
 //	 int amount=cityDao.findByGoodsId(goodsId).getAmount();
 //	 if(amount>0)
 //		 sign=  cityDao.decreaseStock(goodsId);
-		if(amount>=0)
-			System.out.println("下单成功");
+//		if(amount<0)
+//			redisTemplate.opsForValue().increment("apple", 1);
 		return amount;
 	}
    

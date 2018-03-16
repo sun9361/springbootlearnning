@@ -6,6 +6,7 @@ import org.spring.springboot.domain.City;
 import org.spring.springboot.domain.GoodsStock;
 import org.spring.springboot.service.GoodsStockService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +20,8 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class StockRestController {
-
+	@Autowired
+    private RedisTemplate<String, String> redisTemplate;
     @Autowired
     private GoodsStockService cityService;
 
@@ -50,7 +52,10 @@ public class StockRestController {
 
 @RequestMapping(value = "/api/redis/goods/{id}", method = RequestMethod.PUT)
 public void modifyStockFromRedia(@PathVariable("id") Long id) {
+long requsetNum=	 redisTemplate.opsForValue().increment("requsetNum", 1);
+    if(requsetNum<100)
     cityService.decreaseStockFromRedis(id);
+    
 
 }
 }
